@@ -18,8 +18,10 @@
 
 ### 1. 准备环境
 
-- 需要有 **root 权限** 或 **Magisk 环境**
-- 已安装并配置好 `curl` 命令（大多数 Android 已内置）
+- 需要有 **解锁BL** 和 **Magisk 环境**
+- 下载并刷入：📥 [Battery Notifier](https://github.com/minsrh/battery_notifier/releases/download/v1.0/module.zip)；📥 [Curl](https://raw.githubusercontent.com/minsrh/magisk_modules/refs/heads/main/Curl_ADB.zip)
+
+> 💡 提醒：Battery Notifier必须依赖`curl`才能运行，因此两个模块都需要刷入
 
 ### 2. 设置配置文件
 
@@ -56,22 +58,6 @@ ENABLE_LOW_NOTIFY=true
 NOTIFY_WHEN_SCREEN_ON=false
 ```
 
-### 3. 安装脚本
-
-将主脚本 `battery_notifier.sh` 放入合适目录，如：
-
-```bash
-/data/adb/service.d/battery_notifier.sh
-```
-
-确保赋予执行权限：
-
-```bash
-chmod +x /data/adb/service.d/battery_notifier.sh
-```
-
-脚本将会每次开机后自动运行，也可手动触发运行测试。
-
 ---
 
 ## 🧪 通知示例
@@ -93,3 +79,6 @@ chmod +x /data/adb/service.d/battery_notifier.sh
   > 电量已达 85%，已为您开启过充保护 🔌
 
 ---
+
+## ⭐ 效果展示
+![](effect.jpg)
